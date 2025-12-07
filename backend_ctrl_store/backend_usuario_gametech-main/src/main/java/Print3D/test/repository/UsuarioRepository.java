@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
 
-@Query(value = "select u.id, u.rut, u.nombre, u.email, u.telefono, u.contrasenia, u.fecha_creacion, u.rol from usuarios u where u.rol = 'cliente'", nativeQuery = true)
+@Query(value = "select u.id, u.nombre, u.email, u.contrasenia, u.rol from usuarios u where u.rol = 'cliente'", nativeQuery = true)
 List<Usuario> findCliente();
 
 }

@@ -33,11 +33,7 @@ public class UsuarioService {
 
             usuarioExistente.setNombre(datosNuevos.getNombre());
             usuarioExistente.setEmail(datosNuevos.getEmail());
-            usuarioExistente.setTelefono(datosNuevos.getTelefono());
-            usuarioExistente.setContrasenia(datosNuevos.getContrasenia());
-            usuarioExistente.setRegion(datosNuevos.getRegion());
-            usuarioExistente.setComuna(datosNuevos.getComuna());
-            usuarioExistente.setFechaCreacion(datosNuevos.getFechaCreacion());
+            usuarioExistente.setPassword(datosNuevos.getPassword());
             usuarioExistente.setRol(datosNuevos.getRol());
 
             return usuarioRepository.save(usuarioExistente);

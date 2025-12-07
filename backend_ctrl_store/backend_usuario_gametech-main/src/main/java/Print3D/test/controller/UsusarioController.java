@@ -43,20 +43,10 @@ public class UsusarioController {
         
         if( usuario.getNombre() == null || usuario.getNombre().isEmpty() ||
             usuario.getEmail() == null || usuario.getEmail().isEmpty() ||
-            usuario.getContrasenia() == null || usuario.getContrasenia().isEmpty() ||
-            usuario.getRegion() == null || usuario.getRegion().isEmpty() ||
-            usuario.getComuna() == null || usuario.getComuna().isEmpty() ||
+            usuario.getPassword() == null || usuario.getPassword().isEmpty() ||
             usuario.getRol() == null || usuario.getRol().isEmpty()){
                 return ResponseEntity.badRequest().build();
             }
-        if (usuario.getTelefono() <=0) {
-            usuario.setTelefono(0);
-        }
-
-        if (usuario.getFechaCreacion() == null) {
-            usuario.setFechaCreacion(LocalDate.now());
-        }
-
         Usuario usuarioCreado = usuarioService.addUsuario(usuario);
 
         return new ResponseEntity<>(usuarioCreado, HttpStatus.CREATED);

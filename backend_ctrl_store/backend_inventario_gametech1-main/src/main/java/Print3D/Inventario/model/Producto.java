@@ -24,16 +24,7 @@ public class Producto {
     @Column(nullable = false, length = 255)
     private String descripcion;
 
-    @Column(nullable = true)
-    private Integer stock;
-
     @Column(nullable = false, length = 255)
     private String categoria;
 
-    @Column(nullable = false)
-    private boolean oferta = false;
-
-    @Column(nullable = true)
-    private int oferPorcentaje = 0;
 }
-

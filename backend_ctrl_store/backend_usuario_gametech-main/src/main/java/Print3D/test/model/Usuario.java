@@ -30,19 +30,7 @@ public class Usuario {
     private String email;
 
     @Column(name = "contrasenia", length = 255, unique = false, nullable = false)
-    private String contrasenia;
-
-    @Column(name = "telefono", length =  255, unique =  false, nullable = true)
-    private int telefono;
-
-    @Column(name = "region", length = 255, unique = false, nullable = false)
-    private String region;
-
-    @Column(name = "comuna", length = 255, unique = false, nullable = false)
-    private String comuna;
-
-    @Column(name = "fechaCreacion", nullable = false)
-    private LocalDate fechaCreacion;
+    private String password;
 
     @Column(name = "rol", length = 255, unique = false, nullable = false, columnDefinition = "varchar(255) default 'cliente'")
     private String rol;

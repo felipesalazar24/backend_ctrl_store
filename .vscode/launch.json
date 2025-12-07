@@ -1,0 +1,35 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-TestApplication<test-backend_usuario_gametech-main>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "Print3D.test.TestApplication",
+      "projectName": "test-backend_usuario_gametech-main",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=54986 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=test-backend_usuario_gametech-main"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-TransaccionesApplication<transacciones-backend_transacciones_gametech-main>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "gamtetech.transacciones.TransaccionesApplication",
+      "projectName": "transacciones-backend_transacciones_gametech-main",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-InventarioApplication<Inventario-backend_inventario_gametech1-main>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "Print3D.Inventario.InventarioApplication",
+      "projectName": "Inventario-backend_inventario_gametech1-main",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

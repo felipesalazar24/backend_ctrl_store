@@ -34,10 +34,6 @@ public class ProductController {
             return ResponseEntity.badRequest().build();
         }
 
-        if (producto.getStock() < 0) {
-            return ResponseEntity.badRequest().build();
-        }
-
         Producto saved = productService.addProducto(producto);
         return ResponseEntity.status(HttpStatus.CREATED).body(saved);
     }
@@ -75,22 +71,4 @@ public class ProductController {
         }
         return ResponseEntity.ok(productos);
     }
-
-    @PatchMapping("/{id}/oferta")
-    public ResponseEntity<?> actualizarOferta(
-            @PathVariable("id") int id,
-            @RequestParam("oferta") boolean oferta,
-            @RequestParam("oferPorcentaje") int oferPorcentaje) {
-
-        try {
-            Producto actualizado = productService.actualizarOferta(id, oferta, oferPorcentaje);
-            return ResponseEntity.ok(actualizado);
-        } catch (IllegalArgumentException e) {
-            return ResponseEntity.badRequest().body(e.getMessage());
-        } catch (RuntimeException e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
-        }
-    }
-
-    
 }
