@@ -22,8 +22,6 @@ public class PedidoResponseDTO {
     public static PedidoResponseDTO fromEntity(Pedido pedido) {
         return PedidoResponseDTO.builder()
                 .id(pedido.getId())
-                .direccion(pedido.getDireccion())
-                .fecha(pedido.getFecha())
                 .usuarioId(pedido.getUsuarioId())
                 .total(pedido.getTotal())
                 .detalles(
